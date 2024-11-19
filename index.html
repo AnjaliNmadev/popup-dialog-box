@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog box</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <button type="submit" class="btn" onclick="openpopup()">Submit</button>
+        <div class="popup" id="popup">
+            <img src="check.png" alt="check">
+            <h2>Thank You!</h2> <br>
+            <p>Your datails has been successfully submitted.</p> <br>
+            <button type="submit"  onclick="closepopup()">ok</button>
+        </div>
+
+    </div>
+
+    <script>
+let popup = document.getElementById("popup");
+let container = document.getElementById("container");
+
+function openpopup()
+{
+    popup.classList.add("open-popup");
+    container.style.backgroundColor="rgba(28, 33, 37, 0.866)";
+}
+function closepopup()
+{
+    popup.classList.remove("open-popup");
+    container.style.backgroundColor="rgba(28, 33, 37, 0.711)";
+}
+
+    </script>
+</body>
+</html>
